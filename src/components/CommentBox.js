@@ -10,13 +10,12 @@ function CommentBox(){
 
     function handleChange(event){
         setComment(event.target.value);
-        dispatch(saveComment(event.target.value));
     }
 
     function handleSubmit(event){
         event.preventDefault();
+        dispatch(saveComment(Comment));
         setComment('');
-        dispatch(saveComment(''));
     }
 
     return (
